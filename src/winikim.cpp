@@ -47,7 +47,7 @@ void putContent(String containerName, String contentType, String data) {
 }
 
 void createPutContentJson(const char cseId[], const char aeId[], const char containerName[], const char contentType[], const char data[]) {
-	sprintf(putContentJson, "{\"m2m:rqp\":{\"op\":1,\"to\":\"%s/base/%s/%s\",\"fr\":\"/%s\",\"rqi\":\"rqi-%s-%lu\",\"ty\":4,\"pc\":{\"m2m:cin\":{\"cnf\":\"%s:0\",\"con\":\"%s\"}}}}", cseId, aeId, containerName, aeId, aeId, millis(), contentType, data);
+	sprintf(putContentJson, "{\"m2m:rqp\":{\"op\":1,\"to\":\"%s/%s/%s\",\"fr\":\"/%s\",\"rqi\":\"rqi-%s-%lu\",\"ty\":4,\"pc\":{\"m2m:cin\":{\"cnf\":\"%s:0\",\"con\":\"%s\"}}}}", cseId, aeId, containerName, aeId, aeId, millis(), contentType, data);
 }
 
 
